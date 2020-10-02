@@ -1,0 +1,2247 @@
+@charset "UTF-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+    font-family:'nbgR';
+    src:url(fonts/NanumBarunGothic.eot?#iefix) format('embedded-opentype'), url(fonts/NanumBarunGothic.woff) format('woff');
+}
+
+/* reset */
+* {margin:0; padding:0; box-sizing: border-box;}
+ul, ol {list-style-type:none;}
+hr {display:none;}
+h1 {margin:0;}
+a {text-decoration:none;}
+button {
+    border:none;
+    background:none;
+    text-indent:-9999px;
+}
+img {border:none;}
+html {font-size:0.625em;}
+body {
+    font-family:Arial, "맑은 고딕", sans-serif;
+    line-height:1;
+}
+.blind {
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+}
+.clear:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+.pc {display:none;}
+
+/* header */
+.navWrap {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+    background:#fff;
+    z-index:10;
+}
+h1 {
+    position:absolute;
+    top:21px; /* 42/2(모바일은 pc의 1/2) */
+    left:50%;
+    width:90px;
+    margin-left:-45px;
+}
+h1 img {
+    width:100%;
+}
+.searchWrap>form>button {
+    position:absolute;
+    top:27px;
+    left:4.4%;
+    width:20px;
+    height:20px;
+    background:url(../img/cjw-icon-search1.png) no-repeat center/contain;
+}
+.searchOn {
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#fff;
+    text-align:center;
+}
+.searchOn .close {
+    color:#959595;
+    font-size:1.7rem;
+}
+.searchOn input {
+    width:66.666%;
+    height:32px;
+    margin:23px 2.266% 0;
+    padding:9px;
+    background:#eee;
+    color:#000;
+    font-size:1.6rem;
+    border:none;
+    border-radius:3px;
+}
+.searchOn button {
+    width:45px;
+    height:31px;
+    background:#777 url(../img/cjw-icon-search2.png) no-repeat center;
+    background-size:15px;
+    border-radius:3px;
+    vertical-align:bottom;
+}
+
+.navBtn {
+    position:absolute;
+    top:29px;
+    right:4.4%;
+    width:24px;
+    height:18px;
+}
+
+.navBtn span {
+    display:block;
+    height:4px;
+    border-radius:4px;
+    background:#000;
+}
+.navBtn span:nth-child(2) {
+    margin:3px 0;
+}
+
+/* nav */
+header nav {
+    display:none;
+    position:fixed;
+    left:0; top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+}
+.navInner {
+    position:absolute;
+    top:0; right:0;
+    width:67.733%;
+    height:100%;
+    padding-top:31px;
+    background:#fff;
+}
+.navInner strong {
+    display:block;
+    width:83.070%;
+    margin:0 0 24px 7.283%;
+}
+.navInner strong span {
+    float:left;
+    width:61px;
+    height:22px;
+}
+.navInner strong span a {
+    display:block;
+    height:100%;
+    background:url(../img/cjw-logo-header.png) no-repeat center/contain;
+    text-indent:-9999px;
+}
+.navInner strong>a {
+    color:#02b5d6;
+    float:right;
+    font-size:1.3rem;
+    font-weight:normal;
+    line-height:22px;
+}
+.navInner .right {
+    display:none;
+}
+
+.navInner ul {
+    width:83.070%;
+    margin-left:7.283%;
+    border-top:2px solid #595959;
+}
+
+    /* open */
+    .navInner .wrap {
+        display:none;
+    }
+    .navInner .wrap.open {
+        display:block;
+    }
+
+.navInner ul>li>a {
+    position:relative;
+    display:block;
+    height:59px;
+    color:#595959;
+    padding-left:4.502%;
+    border-bottom:1px solid #959595;
+    font-size:1.7rem;
+    line-height:59px;
+}
+    /* open */
+    .navInner ul>li.open+li >a {
+        border-top:1px solid #959595;
+    }
+.navInner ul>li:last-child>a {
+    border-bottom:none;
+}
+    /* open */
+    .navInner ul>li:last-child.open>a {
+        border-bottom:1px solid #959595;
+    }
+    .navInner ul>li:last-child.open+li>a {
+        border-top:1px solid #959595;
+    }
+.navInner ul>li>a span {
+    position:absolute;
+    top:50%;
+    right:2.843%;
+    margin-top:-4px;
+    width:15px;
+    height:8px;
+    background:url(../img/cjw-arrow-nav-bottom.png) no-repeat center/contain;
+}
+    /* open */
+    .navInner ul>li.open>a span {
+        background-image: url(../img/cjw-arrow-nav-top.png);
+    }
+.navInner ol {
+    background:#f8f8f8;
+}
+.navInner ol li {
+    width:89.573%;
+    margin-left:4.502%;
+    border-bottom:1px solid #cfcfcf;
+}
+.navInner ol li a {
+    height:45px;
+    padding-left:5.820%;
+    line-height:45px;
+    color:#474747;
+    font-size:1.4rem;
+}
+.navInner ol:last-child li:last-child {
+    border-bottom:none;
+}
+.navInner>a {
+    position:relative;
+    height:58px;
+    padding-left:11.220%;
+    display:block;
+    background:#02b5d6;
+    color:#fff;
+    font-size:1.7rem;
+    line-height:58px;
+}
+.navInner>a:last-child {
+    border-top:2px solid rgba(255,255,255,0.5);
+}
+.navInner>a span {
+    position:absolute;
+    top:50%;
+    right:10.433%;
+    width:27px;
+    height:27px;
+    background:url(../img/cjw-icon-login.png) no-repeat center/contain;
+    margin-top:-14px;
+}
+.navInner>a:last-child span {
+    background-image:url(../img/cjw-icon-phone.png);
+}
+
+
+/* visual */
+.visual {
+    height:550px;
+    margin-top:75px;
+    padding-top:173px;
+    background:url(../img/cjw-bg-main.jpg) no-repeat center/cover;
+    text-align:center;
+}
+.visual div:first-child~div {
+    display:none;
+}
+/* 80eafe/fff857/fefefe */
+.visual i {
+    font-size:1.8rem;
+    display:block;
+    margin-bottom:14px;
+    font-style:normal;
+    color:#fff;
+}
+.visual i span:nth-of-type(1) {
+    color:#80eafe;
+}
+.visual i span:nth-of-type(2) {
+    color:#fff857;
+}
+.visual b {
+    font-size:4.3rem;
+    color:#fff;
+    font-weight:normal;
+}
+.visual p {
+    width:79.466%;
+    margin:23px auto 32px;
+    line-height:1.285;
+    font-size:1.4rem;
+    color:#fff;
+}
+.visual a {
+    display:inline-block;
+    width:311px;
+    height:50px;
+    border:2px solid rgba(255,255,255,0.6);
+    background:rgba(0,0,0,0.4);
+    color:#fff;
+    font-size:1.5rem;
+    line-height:46px;
+    border-radius:3px;
+}
+
+/* section */
+.section {
+    height:50px;
+    border-bottom:1px solid #959595;
+    background:#fff;
+    text-align:center;
+}
+.section.on {
+    position:fixed;
+    top:75px;
+    left:0;
+    width:100%;
+    z-index:2;
+}
+.section li {
+    display:inline-block;
+    width:24%;
+}
+.section li a {
+    display:block;
+    color:#959595;
+    font-size:1.3rem;
+    line-height:50px;
+}
+.section li.on a {
+    color:#000;
+}
+
+/* main */
+#story {
+    padding:29px 0 64px;
+    background:#f8f8f8;
+}
+.storyInner div{
+    width:82.933%;
+    height:328px;
+    margin:0 auto;
+    padding:23px 14px;
+    border:3px solid #f47933;
+    border-radius:2px;
+    background:#fff url(../img/cjw-bg-smart.jpg) no-repeat right bottom;
+    background-size:83.922%;
+    color:#343434;
+}
+.storyInner div b {
+    display:block;
+    width:72px;
+    height:30px;
+    margin-bottom:13px;
+    background:url(../img/cjw-logo-smart.png) no-repeat center/contain;
+    text-indent:-9999px;
+}
+.storyInner div i {
+    font-size:2.0rem;
+    line-height:1.25;
+    font-style:normal;
+}
+.storyInner div i span {
+    display:block;
+}
+.storyInner div p {
+    margin:13px 41px 15px 0;
+    font-size:1.3rem;
+    line-height:1.153;
+}
+.storyInner div a {
+    width:150px;
+    height:35px;
+    display:block;
+    border:2px solid #cfcfcf;
+    background:#fff;
+    color:#343434;
+    font-size:1.1rem;
+    line-height:31px;
+    text-align:center;
+}
+.storyInner div a span {
+    display:inline-block;
+    width:7px;
+    height:7px;
+    margin-left:15px;
+    background:url(../img/cjw-plus-story-orange.png) no-repeat center/contain;
+}
+
+.storyInner div:nth-of-type(2) {
+    border:3px solid #01b5d6;
+    background-image:url(../img/cjw-bg-fresh.jpg);
+}
+.storyInner div:nth-of-type(2) b {
+    background:url(../img/cjw-logo-fresh.png) no-repeat center/contain;
+}
+.storyInner div:nth-of-type(2) a span {
+    background:url(../img/cjw-plus-story-blue.png) no-repeat center/contain;
+}
+
+.storyInner div:nth-of-type(3) {
+    border:3px solid #ef4665;
+    background-image:url(../img/cjw-bg-classic.jpg);
+}
+.storyInner div:nth-of-type(3) b {
+    background:url(../img/cjw-logo-classic.png) no-repeat center/contain;
+}
+.storyInner div:nth-of-type(3) a span {
+    background:url(../img/cjw-plus-story-red.png) no-repeat center/contain;
+}
+.storyInner div:first-child~div {display:none;}
+
+/* cast */
+#cast {
+    padding-bottom:30px;
+    background:#f8f8f8;
+}
+.castInner .title {
+    height:147px;
+    padding-top:39px;
+    background:url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+    text-align:center;
+    margin-bottom:19px;
+}
+.castInner .title h3 {
+    font-size:3.3rem;
+    color:#fff;
+    margin-bottom:13px;
+    font-weight:normal;
+}
+.castInner .title a {
+    width:230px;
+    height:40px;
+    display:inline-block;
+    background:rgba(0,0,0,0.4);
+    border:2px solid rgba(255,255,255,0.6);
+    line-height:36px;
+    font-size:1.3rem;
+    color:#fff;
+    border-radius:2px;
+}
+.castInner .title a span {
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background:url(../img/cjw-plus-section-blue.png) no-repeat center/contain;
+    margin-left:11px;
+}
+.castInner .slider {
+    width:82.933%;
+    padding:2px;
+    margin:0 auto 61px;
+    border:1px solid rgba(149,149,149,0.6);
+    border-radius:3px;
+    background-color:#fff;
+}
+.castInner .slider div>span{
+    background:url(../img/cjw-img-foodCast.jpg) no-repeat center/cover;
+    display:block;
+    height:202px;
+}
+.castInner .slider div a b, .castInner .slider div a p,.castInner .slider div a >span {
+    display:none;
+}
+.castInner .slider div a {
+    display:block;
+    text-align:center;
+    padding:14px 0 17px;
+}
+.castInner .slider div h4 {
+    font-size:1.3rem;
+    color:#626262;
+    font-weight:normal;
+}
+.castInner .slider div:first-child~div {
+    display:none;
+}
+.castInner .banner {
+    position:relative;
+    display:block;
+    width:82.933%;
+    padding:25px 81px 24px 100px;
+    margin:0 auto 11px;
+    border-radius:3px;
+    background:#02b5d6 url(../img/cjw-icon-foodLab.png) no-repeat 14px 50%/58px;
+}
+.castInner .banner:last-child {
+    background:#76d9c5 url(../img/cjw-icon-bottleRecipe.png) no-repeat 14px 50%/58px;
+}
+.castInner .banner h4 {
+    font-size:2.0rem;
+    color:#000;
+    font-weight:normal;
+    margin-bottom:10px;
+}
+.castInner .banner p {
+    font-size:1.1rem;
+    line-height:1.181;
+    color:#000;
+}
+.castInner .banner>span {
+    position:absolute;
+    top:50%;
+    right:12px;
+    width:15px;
+    height:30px;
+    margin-top:-15px;
+    background:url(../img/cjw-arrow-section-right.png) no-repeat center/contain;
+    text-indent:-9999px;
+}
+
+/* knowhow */
+#knowhow {
+    padding-bottom:30px;
+    background:#f8f8f8;
+}
+.knowhowInner .title {
+    height:147px;
+    padding-top:39px;
+    background:url(../img/cjw-bg-foodKnowhow-mobile.jpg) no-repeat center/cover;
+    text-align:center;
+    margin-bottom:19px;
+}
+.knowhowInner .title h3 {
+    font-size:3.3rem;
+    color:#fff;
+    margin-bottom:13px;
+    font-weight:normal;
+}
+.knowhowInner .title a {
+    width:230px;
+    height:40px;
+    display:inline-block;
+    background:rgba(0,0,0,0.4);
+    border:2px solid rgba(255,255,255,0.6);
+    line-height:36px;
+    font-size:1.3rem;
+    color:#fff;
+    border-radius:2px;
+}
+.knowhowInner .title a span {
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background:url(../img/cjw-plus-section-yellow.png) no-repeat center/contain;
+    margin-left:11px;
+}
+.knowhowInner .slider {
+    width:82.933%;
+    padding:2px;
+    margin:0 auto 61px;
+    border:1px solid rgba(149,149,149,0.6);
+    border-radius:3px;
+    background-color:#fff;
+}
+.knowhowInner .slider div>span{
+    background:url(../img/cjw-img-specialRecipe.jpg) no-repeat center/cover;
+    display:block;
+    height:202px;
+}
+.knowhowInner .slider div a b, .knowhowInner .slider div a h4,.knowhowInner .slider div a >span {
+    display:none;
+}
+.knowhowInner .slider div a {
+    display:block;
+    text-align:center;
+    padding:14px 0 17px;
+    font-size:1.3rem;
+    color:#626262;
+    font-weight:normal;
+}
+.knowhowInner .slider div h4 {
+    font-size:1.3rem;
+    color:#626262;
+    font-weight:normal;
+}
+.knowhowInner .slider div:first-child~div {
+    display:none;
+}
+
+.knowhowInner .banner {
+    position:relative;
+    display:block;
+    width:82.933%;
+    padding:25px 81px 24px 100px;
+    margin:0 auto 11px;
+    border-radius:3px;
+    background:#76d9c5 url(../img/cjw-icon-cjwRecipe.png) no-repeat 14px 50%/58px;
+}
+.knowhowInner .banner:last-child {
+    
+}
+.knowhowInner .banner h4 {
+    font-size:2.0rem;
+    color:#000;
+    font-weight:normal;
+    margin-bottom:10px;
+}
+.knowhowInner .banner p {
+    font-size:1.1rem;
+    line-height:1.181;
+    color:#000;
+}
+.knowhowInner .banner>span {
+    position:absolute;
+    top:50%;
+    right:12px;
+    width:15px;
+    height:30px;
+    margin-top:-15px;
+    background:url(../img/cjw-arrow-section-right.png) no-repeat center/contain;
+    text-indent:-9999px;
+}
+.knowhowInner .bannerWrap a {display:none;}
+.knowhowInner .bannerWrap a:nth-child(3) {
+    position:relative;
+    display:block;
+    width:82.933%;
+    padding:25px 81px 24px 100px;
+    margin:0 auto 11px;
+    border-radius:3px;
+    background:#f4cb4d url(../img/cjw-icon-eShop.png) no-repeat 14px 50%/58px;
+}
+
+/* friends */
+#friends {
+    padding-bottom:32px;
+    background:#f8f8f8;
+}
+.friendsInner .title {
+    height:147px;
+    background:url(../img/cjw-bg-friends.jpg) no-repeat center/cover;
+    text-align:center;
+    padding-top:37px;
+    margin-bottom:20px;
+}
+.friendsInner .title h3 {
+    font-size:3.3rem;
+    color:#fff;
+    margin-bottom:13px;
+    font-weight:normal;
+}
+.friendsInner .title a {
+    width:230px;
+    height:40px;
+    display:inline-block;
+    font-size:1.3rem;
+    color:#fff;
+    background:rgba(0,0,0,0.4);
+    border:2px solid rgba(255,255,255,0.6);
+    line-height:36px;
+    border-radius:2px;
+}
+.friendsInner .title a span {
+    background:url(../img/cjw-plus-section-green.png) no-repeat center/contain;
+    width:10px;
+    height:10px;
+    margin-left:14px;
+    display:inline-block;
+}
+.friendsInner .banner {
+    position:relative;
+    display:block;
+    width:82.933%;
+    margin:0 auto 10px;
+}
+.friendsInner .banner:nth-of-type(1) {
+    background:#f4cb4d;
+    overflow:hidden;
+    padding:25px 11px;
+    margin-bottom:10px;
+    color:#000;
+}
+.friendsInner .banner:nth-of-type(1) .bg {
+    position:absolute;
+    bottom:0;
+    right:-31px;
+    width:139px;
+    height:139px;
+    background:url(../img/cjw-icon-foodBox.png) no-repeat;
+    background-size:contain;
+}
+.friendsInner .banner:nth-of-type(1) b {
+    font-size:1.8rem;
+    line-height:1.111;
+    font-weight:normal;
+}
+.friendsInner .banner:nth-of-type(1) .line {
+    display:block;
+    width:67.632%;
+    background:rgba(255,255,255,0.5);
+    height:3px;
+    margin:16px 0;
+}
+.friendsInner .banner:nth-of-type(1) p {
+    line-height:1.181;
+    font-size:1.1rem;
+    margin-bottom:22px;
+}
+.friendsInner .banner:nth-of-type(1) span:last-child {
+    display:inline-block;
+    width:145px;
+    height:35px;
+    border:2px solid #fff;
+    background:rgba(255,255,255,0.5);
+    line-height:31px;
+    font-size:1.3rem;
+    text-align:center;
+}
+.friendsInner .banner:nth-of-type(2) {
+    background:#02b5d6 url(../img/cjw-icon-friendsPanel.png) no-repeat 15px 50%/71px;
+    color:#fff;
+    padding:21px 47px 25px 99px;
+}
+.friendsInner .banner:nth-of-type(2) h4 {
+    margin-bottom:9px;
+    font-size:1rem;
+    font-weight:normal;
+}
+.friendsInner .banner:nth-of-type(2) p {
+    font-size:1.2rem;
+    line-height:1.083;
+}
+.friendsInner .banner:nth-of-type(2) span {
+    position:absolute;
+    top:50%;
+    right:11px;
+    display:inline-block;
+    width:16px;
+    height:30px;
+    background:url(../img/cjw-arrow-section-right.png) no-repeat center/contain;
+    text-indent:-9999px;
+    margin-bottom:9px;
+}
+.friendsInner .box {
+    width:82.933%;
+    margin:0 auto;
+}
+.friendsInner .bannerBox {
+    float:left;
+    width:50%;
+    height:113px;
+    padding-top:13px;
+    border:2px solid #cfcfcf;
+}
+.friendsInner .bannerBox:last-child {
+    border-left:none;
+}
+.friendsInner .bannerBox h4 {
+    background:url(../img/cjw-icon-foodEditor.png)
+ no-repeat;
+    background-position:50% 5px;
+    background-size:62px;
+    font-size:1.2rem;
+    color:#000;
+    text-align:center;
+    padding-top:70px;
+    font-weight:normal;
+}
+.friendsInner .bannerBox:last-child h4 {
+    background-image:url(../img/cjw-icon-meetingTalk.png);
+    background-size:53px;
+    background-position:50% 8px;
+}
+
+/* sns */
+#sns {
+    padding:35px 0 34px;
+    background:#fff;
+}
+.snsInner .title {
+    text-align:center;
+}
+.snsInner .title h3 {
+    margin-bottom:14px;
+    font-size:3.3rem;
+    font-weight:normal;
+    color:#000;
+}
+.snsInner .title p {
+    font-size:1.4rem;
+}
+.snsInner .sns {
+    margin:20px 0 31px;
+    text-align:center;
+}
+.snsInner .sns a {
+    display:inline-block;
+    width:35px;
+    height:35px;
+    margin-right:20px;
+    background:url(../img/cjw-sns-facebook.png) no-repeat center/contain;
+    text-indent:-9999px;
+}
+.snsInner .sns a:nth-child(2) {background-image:url(../img/cjw-sns-kakao.png);}
+.snsInner .sns a:nth-child(3) {background-image:url(../img/cjw-sns-blog.png);}
+.snsInner .sns a:nth-child(4) {background-image:url(../img/cjw-sns-twitter.png);}
+.snsInner .sns a:nth-child(5) {background-image:url(../img/cjw-sns-instagram.png);}
+.snsInner .sns a:nth-child(6) {background-image:url(../img/cjw-sns-youtube.png);}
+.snsInner .sns a:last-child {margin-right:0;}
+.snsInner .box {
+    width:82.933%;
+    margin:0 auto;
+}
+.snsInner .box a {
+    display:block;
+    height:160px;
+    border:2px solid #f8f7f7;
+}
+.snsInner .box a {border-top:none;}
+.snsInner .box a span {
+    float:left;
+    width:50%;
+    height:100%;
+    border-right:2px solid #f8f7f7;
+    background:url(../img/cjw-img-snsNaver.jpg) no-repeat center/cover;
+}
+.snsInner .box a:last-child span {
+    float:right;
+    border-right:none;
+    border-left:2px solid #f8f7f7;
+    background-image:url(../img/cjw-img-snsFacebook.jpg);
+}
+.snsInner .box .text {
+    position:relative;
+    float:left;
+    width:50%;
+    height:100%;
+    padding:21px 10px;
+}
+.snsInner .box h4 {
+    height:18px;
+    background:url(../img/cjw-sns-blog.png) no-repeat right center/contain;
+    font-size:1.3rem;
+    color:#000;
+    font-weight:normal;
+    line-height:18px;
+}
+.snsInner .box a:last-child h4 {
+    background-image:url(../img/cjw-sns-facebook.png);
+}
+.snsInner .box p {
+    position:absolute;
+    bottom:10px;
+    left:0;
+    width:100%;
+    padding:0 10px;
+    font-size:1.3rem;
+    color:#494949;
+    line-height:1.076;
+}
+
+/* footer */
+footer {
+    border-top:1px solid #cfcfcf;
+    background:#fbfbfb;
+}
+footer a {
+    color:#767676;
+}
+.snsWrap > a {
+    display:block;
+    height:50%;
+    padding-left:8.933%;
+    border-bottom:1px solid #cfcfcf;
+    font-size:1.2rem;
+    color:#02b5d6;
+    line-height:50px;
+}
+.snsWrap li {
+    width:50%;
+    float:left;
+    border-bottom:1px solid #cfcfcf;
+}
+.snsWrap li:nth-child(even) {
+    border-left:1px solid #cfcfcf;
+}
+.snsWrap li a {
+    display:block;
+    height:50px;
+    padding-left:17.771%;
+    font-size:1.2rem;
+    line-height:50px;
+}
+.snsWrap li a:hover, .snsWrap li a:focus {
+    color:#000;
+}
+.copyWrap > span a {
+    float:left;
+    width:50%;
+    height:50px;
+    padding-left:17.771%;
+    border-bottom:1px solid #cfcfcf;
+    background:url(../img/cjw-logo-ccm.png) no-repeat 20.291% 50%/27px;
+    font-size:1.0rem;
+    line-height:50px;
+}
+.copyWrap > span a:last-child {
+    border-left:1px solid #cfcfcf;
+    background-image:url(../img/cjw-logo-wa.png);
+    background-size:18px;
+}
+
+.copy {
+    padding-top:29px;
+    text-align:center;
+}
+.copy img {
+    width:40px;
+    margin-bottom:25px;
+}
+.copy p > span {
+    display:none;
+}
+.copy .phone span {
+    color:#666;
+    font-size:1.1rem;
+    line-height:1.454;
+    font-style:normal;
+}
+.copy .phone span:first-child:after {
+    content:"|";
+    margin:0 11px;
+}
+.copy .phone span:last-child {
+    display:block;
+}
+footer small {
+    display:block;
+    height:45px;
+    font-size:1.0rem;
+    background:#666;
+    color:#fbfbfb;
+    margin-top:28px;
+    line-height:45px;
+}
+
+/* cjw 05 */
+@media screen and (min-width:768px) {
+    /* reset */
+    body {font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';}
+    
+    /* header */
+    .navWrap {
+        height:80px;
+    }
+    h1 {
+        top:26px;
+        width:108px;
+        margin-left:-54px;
+    }
+    .searchWrap>form>button {
+        top:30px;
+        left:5.338%;
+        width:30px;
+        height:30px;
+    }
+    .searchOn .close {
+        font-size:2.1rem;
+    }
+    .searchOn input {
+        width:71.641%;
+        height:40px;
+        margin:23px 1.953% 0;
+        border-radius:5px;
+        line-height:40px;
+        font-size:2.1rem;
+        padding:12px 23px;
+    }
+    .searchOn button {
+        width:70px;
+        height:40px;
+        border-radius:5px;
+        background-size:20px;
+    }
+    .navBtn {
+        top:33px;
+        right:5.208%;
+        width:42px;
+        height:26px;
+    }
+    .navBtn span {
+        height:6px;
+        border-radius:6px;
+    }
+    .navBtn span:nth-child(2) {
+        margin:4px 0;
+    }
+    .navInner {
+        width:66.145%;
+        padding-top:30px;
+    }
+    .navInner strong span {
+        width:100px;
+        height:35px;
+    }
+    .navInner strong span a {
+        font-size:2.1rem;
+        line-height:35px;
+    }
+    .navInner strong>a {
+        line-height:35px;
+        font-size:2.1rem;
+    }
+    .navInner ul>li>a {
+        height:90px;
+        padding-left:4.265px;
+        font-size:2.5rem;
+        line-height:90px;
+    }
+    .navInner ul>li>a span {
+        right:2.843%;
+        width:20px;
+        height:10px;
+        margin-top:-5px;
+    }
+    .navInner ol li a {
+        height:70px;
+        font-size:2.1rem;
+        line-height:70px;
+        padding-left:4.976%;
+    }
+    .navInner>a {
+        height:100px;
+        padding-left:11.023%;
+        font-size:2.5rem;
+        line-height:100px;
+    }
+    .navInner>a span {
+        width:40px;
+        height:40px;
+        right:12.204%;
+        margin-top:-20px;
+    }
+    
+    /* visual */
+    .visual {
+        height:750px;
+        margin-top:80px;
+        padding-top:180px;
+    }
+    .visual i {
+        font:3.3rem nbgR, sans-serif;
+        margin-bottom:23px;
+    }
+    .visual b {
+        font:7.5rem nbgR, sans-serif;
+    }
+    .visual p {
+        width:66.666%;
+        margin:32px auto 37px;
+        font-size:2.4rem;
+    }
+    .visual a {
+        width:300px;
+        height:70px;
+        font-size:2.1rem;
+        line-height:66px;
+    }
+    
+    /* section */
+    .section {
+        height:70px;
+    }
+    .section.on {
+        top:80px;
+    }
+    .section li {
+        width:auto;
+    }
+    .section li:before {
+        content:"|";
+        color:#959595;
+        font-size:1.7rem;
+        line-height:78px;
+    }
+    .section li:first-child:before {
+        content:none;
+    }
+    .section li a {
+        display:inline-block;
+        line-height:70px;
+        font-size:1.7rem;
+        padding:0 25px;
+    }
+    
+    /* story */
+    #story {
+        padding:37px 0 97px;
+    }
+    .storyInner {
+        width:80.989%;
+        margin:0 auto;
+    }
+    .storyInner div {
+        float:left;
+        width:49.517%;
+        height:375px;
+        padding:23px;
+        border-width:2px;
+        border-radius:4px;
+        margin-left:0.964%;
+    }
+    .storyInner div:first-child {
+        margin-left:0;
+    }
+    #story .storyInner div:nth-of-type(2) {
+        display:block;
+    }
+    .storyInner div p {
+        margin:15px auto 28px;
+        font-size:1.7rem;
+    }
+    .storyInner div a {
+        width:188px;
+        height:45px;
+        font-size:1.5rem;
+        line-height:41px;
+    }
+    .storyInner div a span {
+        width:15px;
+        height:15px;
+        margin-left:18px;
+    }
+    
+    /* cast */
+    #cast {
+        padding-bottom:107px;
+    }
+    .castInner .title {
+        height:294px;
+        padding-top:84px;
+        margin-bottom:38px;
+    }
+    .castInner .title h3 {
+        font:5.8rem nbgR, sans-serif;
+        margin-bottom:31px;
+    }
+    .castInner .title a {
+        font-size:2.1rem;
+        width:350px;
+        height:70px;
+        line-height:66px;
+    }
+    .castInner .title a span {
+        width:20px;
+        height:20px;
+        margin-left:30px;
+    }
+    .castInner .slider {
+        width:84.375%;
+        padding:3px;
+        border-radius:5px;
+        margin:0 auto 122px;
+    }
+    .castInner .slider div>span {
+        height:403px;
+        border-radius:5px 5px 0 0;
+    }
+    .castInner .slider div a {
+        padding:30px 0 33px;
+    }
+    .castInner .slider div h4 {
+        font-size:2.4rem;
+    }
+    .castInner .banner {
+        width:84.375%;
+        padding:56px 100px 53px 156px;
+        border-radius:5px;
+        background-position:28px 50%;
+        background-size:100px;
+        margin:0 auto 20px;
+    }
+    .castInner .banner:last-child {
+        background-position:28px 50%;
+        background-size:100px;
+    }
+    .castInner .banner h4 {
+        margin-bottom:23px;
+        font-size:3.3rem;
+    }
+    .castInner .banner p {
+        font-size:2.0rem;
+        line-height:1.3;
+    }
+    .castInner .banner>span {
+        right:34px;
+        width:31px;
+        height:56px;
+        margin-top:-28px;
+    }
+    
+    /* knowhow */
+    #knowhow {
+        padding-bottom:107px;
+    }
+    .knowhowInner .title {
+        height:295px;
+        padding-top:84px;
+        margin-bottom:38px;
+    }
+    .knowhowInner .title h3 {
+        font:5.8rem nbgR, sans-serif;
+        margin-bottom:31px;
+    }
+    .knowhowInner .title a {
+        width:350px;
+        height:70px;
+        line-height:66px;
+        font-size:2.1rem;
+    }
+    .knowhowInner .title a span {
+        width:20px;
+        height:20px;
+        margin-left:38px;
+    }
+    .knowhowInner .slider {
+        padding:3px;
+        border-radius:5px;
+        margin:0 auto 122px;
+    }
+    .knowhowInner .slider div>span {
+        height:403px;
+        border-radius:5px 5px 0 0;
+    }
+    .knowhowInner .slider div a {
+        padding:30px 0 33px;
+    }
+    .knowhowInner .slider div p {
+        font-size:2.4rem;
+        line-height:1.25;
+    }
+    .knowhowInner .banner {
+        width:84.375%;
+        padding:56px 100px 53px 156px;
+        margin:0 auto 20px;
+        border-radius:5px;
+        background-position:28px 50%;
+        background-size:100px;
+    }
+    .knowhowInner .banner h4 {
+        font-size:3.3rem;
+    }
+    .knowhowInner .banner p {
+        font-size:2.0rem;
+    }
+    .knowhowInner .banner>span {
+        right:34px;
+        width:29px;
+        height:55px;
+        margin-top:-28px;
+    }
+    .knowhowInner .bannerWrap a:nth-child(3) {
+        width:84.375%;
+        padding:56px 100px 53px 156px;
+        margin:0 auto 20px;
+        border-radius:5px;
+        background-position:28px 50%;
+        background-size:100px;
+    }
+    
+    /* friends */
+    #friends {
+        padding-bottom:63px;
+    }
+    .friendsInner .title {
+        height:294px;
+        margin-bottom:38px;
+        padding-top:63px;
+    }
+    .friendsInner .title h3 {
+        margin-bottom:29px;
+        font:5.8rem nbgR, sans-serif;
+    }
+    .friendsInner .title a {
+        width:350px;
+        height:70px;
+        font-size:2.1rem;
+        margin-left:41px;
+        line-height:66px;
+    }
+    .friendsInner .title a span {
+        width:20px;
+        height:20px;
+        margin-left:38px;
+    }
+    .friendsInner .banner {
+        width:84.375%;
+        margin:0 auto 20px;
+    }
+    .friendsInner .banner:nth-of-type(1){
+        padding:52px 0 40px 36px;
+    }
+    .friendsInner .banner:nth-of-type(1) .bg {
+        right:-51px;
+        width:277px;
+        height:277px;
+    }
+    .friendsInner .banner:nth-of-type(1) b {
+        font-size:3.3rem;
+    }
+    .friendsInner .banner:nth-of-type(1) .line {
+        width:64.914%;
+        height:3px;
+        margin:31px 0;
+    }
+    .friendsInner .banner:nth-of-type(1) p {
+        margin-bottom:47px;
+        font-size:2.1rem;
+    }
+    .friendsInner .banner:nth-of-type(1) span:last-child {
+        width:250px;
+        height:70px;
+        border-radius:2px;
+        font-size:2.1rem;
+        line-height:66px;
+    }
+    .friendsInner .banner:nth-of-type(2) {
+        padding:56px 100px 53px 210px;
+        background-size:110px;
+        background-position:59px 50%;
+    }
+    .friendsInner .banner:nth-of-type(2) h4 {
+        font-size:1.7rem;
+        line-height:1;
+    }
+    .friendsInner .banner:nth-of-type(2) p {
+        font-size:2.0rem;
+        line-height:1.3;
+    }
+    .friendsInner .banner:nth-of-type(2) span {
+        right:34px;
+        width:29px;
+        height:55px;
+        margin-top:-28px;
+    }
+    .friendsInner .box {
+        width:84.375%;
+    }
+    .friendsInner .bannerBox {
+        height:225px;
+        padding-top:27px;
+    }
+    .friendsInner .bannerBox h4 {
+        padding-top:141px;
+        background-size:123px;
+        font-size:2.1rem;
+    }
+    .friendsInner .bannerBox:last-child h4 {
+        background-position:50% 9px;
+        background-size:107px;
+    }
+    
+    /* sns */
+    #sns {
+        padding:76px 0 86px;
+    }
+    .snsInner .title h3 {
+        margin-bottom:24px;
+        font:5.8rem;
+    }
+    .snsInner .title p {
+        font-size:2.1rem;
+    }
+    .snsInner .sns {
+        margin:50px 0 62px;
+    }
+    .snsInner .sns a {
+        width:70px;
+        height:70px;
+        margin-right:40px;
+    }
+    .snsInner .box {
+        width:84.375%;
+    }
+    .snsInner .box a {
+        height:280px;
+    }
+    .snsInner .box .text {
+        padding:35px 20px 0;
+    }
+    .snsInner .box h4 {
+        height:36px;
+        font-size:1.8rem;
+        line-height:36px;
+    }
+    .snsInner .box p {
+        bottom:46px; 
+        padding:0 20px;
+        font-size:2rem;
+    }
+    
+    /* footer */
+    .snsWrap > a {
+        height:108px;
+        padding-left:7.421%;
+        font-size:2rem;
+        line-height:100px;
+    }
+    .snsWrap li a {
+        height:80px;
+        padding-left:14.843%;
+        font-size:2rem;
+        line-height:80px;
+    }
+    .copyWrap > span a {
+        height:80px;
+        padding-left:14.843%;
+        background-position:14.843% 50%;
+        background-size:36px;
+        font-size:2rem;
+        line-height:80px;
+    }
+    .copyWrap > span a:last-child {
+        background-size:32px;
+    }
+    .copy {
+        margin-top:43px;
+    }
+    .copy img {
+        width:auto;
+        margin-bottom:49px;
+    }
+    .copy .phone span {
+        font-size:2.2rem;
+    }
+    .copy .phone span:first-child:after {
+        margin:0 22px;
+    }
+    footer small {
+        height:88px;
+        margin-top:57px;
+        font-size:1.8rem;
+        line-height:88px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    /* reset */
+    .pc {display:block;}
+    .mobile {display:none;}
+    
+    /* header */
+    .navWrap {
+        position:relative;
+        height:135px;
+    }
+	header.on .navWrap {
+		position:fixed;
+		width:100%;
+		height:70px;
+	}
+    h1 {
+        top:-9999px;
+        left:-9999px;
+    }
+    .searchWrap {
+        width:88.476%;
+        height:56px;
+        margin:0 auto;
+    }
+	header.on .searchWrap {display:none;} 
+    .searchWrap form {
+        position:relative;
+        float:left;
+    }
+    .searchOn {
+        display:block;
+        position:static;
+        width:auto;
+        height:auto;
+        padding-top:20px;
+    }
+    .searchOn input {
+        width:140px;
+        height:23px;
+        border-bottom:1px solid #4d4d4d;
+        padding:0;
+        margin:0;
+        border-radius:0;
+        font-size:1.4rem;
+        background:none;
+    }
+    .searchOn button {
+        width:15px;
+        height:15px;
+        background:url(../img/cjw-icon-search1.png) no-repeat center/contain;
+    }
+    .searchWrap .pc {
+        float:right;
+        margin-top:23px;
+    }
+    .searchWrap .pc a {
+        font-size:1.4rem;
+        color:#808080;
+    }
+    .searchWrap .pc a:first-child {
+        color:#00b4d8;
+    }
+    .searchWrap .pc a:before {
+        content:"|";
+        padding:0 15px;
+    }
+    .searchWrap .pc a:first-child:before {
+        content:none;
+    }
+    header nav {
+        display:block;
+        position:relative;
+        width:auto;
+        height:auto;
+        background:none;
+        border-top:1px solid #cfcfcf;
+    }
+    .navInner {
+        position:static;
+        width:88.476%;
+        padding-top:0;
+        margin:0 auto;
+		background:none;
+    }
+    .navInner strong {
+        float:left;
+        width:auto;
+        margin:0;
+    }
+    .navInner strong span {
+        width:120px;
+        height:42px;
+        margin-top:20px;
+    }
+	header.on .navInner strong span {
+		width:110px;
+		height:39px;
+	}
+    .navInner ul {
+        float:right;
+        width:auto;
+        margin-left:0;
+        border-top:0;
+    }
+    .navInner > a {
+        display:none;
+    }
+    .navInner ul > li {
+        float:left;
+    }
+    .navInner ul > li:before {
+        content:"|";
+        margin:0 20px;
+        color:#000;
+        font-size:1.6rem;
+    }
+	.navInner ul>li.open+li >a {
+		border-top:none;
+	}
+    .navInner ul > li:first-child:before {
+        content:none;
+    }
+    .navInner ul > li > a {
+        display:inline-block;
+        color:#000;
+        font-size:1.6rem;
+        padding-left:0;
+        border-bottom:0;
+        line-height:78px;
+    }
+	header.on .navInner ul > li > a {
+		font-size:1.5rem;
+		line-height:70px;
+	}
+	header.on .navInner ul > li:before {
+		font-size:1.5rem;
+	}
+    .navInner ul > li > a span {
+        display:none;
+    }
+    .navInner ul > li.open > a span {
+        display:block;
+        top:auto;
+        bottom:-2px;
+        right:50%;
+		width:26px;
+		height:14px;
+        margin-right:-13px;
+        z-index:2;
+        background-image:url(../img/cjw-arrow-nav-bottom-fill.png);
+    }
+    .navInner .wrapInner {
+        width:88.476%;
+        margin:0 auto;
+    }
+    .navInner .wrapNav {
+        height:290px
+    }
+    .navInner .left {
+        float:left;
+        width:51.876%;
+        height:100%;
+        margin:10px 0;
+        border-right:1px solid #cfcfcf;
+    }
+    .navInner ol {
+        float:left;
+        width:50%;
+        margin-top:54px;
+        background:none;
+    }
+	.navInner li:nth-child(1) ol {
+		width:33.333%;
+	}
+    .navInner ol > li {
+        width:auto;
+        margin-left:0;
+        border-bottom:none;
+    }
+    .navInner ol > li > a {
+        height:auto;
+        padding-left:0;
+        font-size:2.0rem;
+        line-height:2;
+        color:#000;
+    }
+    .navInner .right {
+        float:right;
+        display:block;
+        width:48.123%;
+		height:100%;
+        padding:53px 38px;
+        background:url(../img/cjw-bg-nav-event.jpg) no-repeat right bottom;
+    }
+	.navInner li:nth-child(5) .right {
+		background-image:url(../img/cjw-bg-nav-friends.jpg);
+	}
+	.navInner li:nth-child(4) .right {
+		background:none;
+	}
+	.navInner li:nth-child(4) .right a {
+		width:49px;
+		height:49px;
+		background:url(../img/cjw-sns-facebook.png) no-repeat center/contain;
+		display:inline-block;
+		border:none;
+		text-indent:-9999px;
+		margin-right:8px;
+	}
+	.navInner li:nth-child(4) .right a:nth-of-type(2) {
+		background-image:url(../img/cjw-sns-kakao.png);
+	}
+	.navInner li:nth-child(4) .right a:nth-of-type(3) {
+		background-image:url(../img/cjw-sns-blog.png);
+	}
+	.navInner li:nth-child(4) .right a:nth-of-type(4) {
+		background-image:url(../img/cjw-sns-twitter.png);
+	}
+	.navInner li:nth-child(4) .right a:nth-of-type(5) {
+		background-image:url(../img/cjw-sns-instagram.png);
+	}
+	.navInner li:nth-child(4) .right a:nth-of-type(6) {
+		background-image:url(../img/cjw-sns-youtube.png);
+	}
+	.navInner li:nth-child(3) .right {
+		background-image:url(../img/cjw-bg-nav-foodKnowhow.jpg);
+		background-position:right 80px;
+	}
+	.navInner li:nth-child(2) .right {
+		background-image:url(../img/cjw-bg-nav-foodCast.jpg);
+		background-position:right 60px;
+	}
+	.navInner li:nth-child(1) .right {
+		background-image:url(../img/cjw-bg-nav-brandStory.jpg);
+	}
+	.navInner li:nth-child(1) .right a {
+		margin-top:25px;
+	}
+    .navInner .right b {
+        font-size:3.4rem;
+        font-weight:normal;
+        color:#000;
+    }
+    .navInner .right p {
+        font-size:1.6rem;
+        color:#343434;
+        margin:16px 0 26px;
+		line-height:1.3;
+    }
+    .navInner .right a {
+		display:block;
+        width:110px;
+        height:46px;
+        background:#fff;
+        border:2px solid #cfcfcf;
+        font-size:1.4rem;
+        color:#343434;
+        text-align:center;
+        line-height:42px;
+    }
+    .navInner .right a span {
+        display:inline-block;
+        width:12px;
+        height:12px;
+        margin-left:19px;
+        background:url(../img/cjw-plus-section-blue.png) no-repeat center/contain;
+    }
+    .navInner .open .wrap {
+        display:block;
+        position:absolute;
+        left:0;
+        top:78px;
+        width:100%;
+        background:#fff;
+        border-top:1px solid #cfcfcf;
+    }
+	header.on .navInner .open .wrap {
+		top:69px;
+	}
+	
+	/* visual */
+	.visual {
+		height:638px;
+		margin-top:0;
+		padding-top:138px;
+	}
+	header.on .visual {
+		margin-top:70px;
+	}
+	.visual i {
+		margin-bottom:17px;
+		font-size:3.7rem;
+	}
+	.visual b {
+		font-size:8.3rem;
+	}
+	.visual p {
+		width:78.515%;
+		font-size:2.5rem;
+		margin:32px auto 47px;
+	}
+	.visual a {
+		width:350px;
+		height:80px;
+		line-height:76px;
+		font-size:2.5rem;
+	}
+	.visual .pc {display:none;}
+	
+	/* section */
+	.section {display:none;}
+	
+	/* main */
+	#story {
+		padding:49px 0 102px;
+	}
+	.storyInner {
+		width:82.128%;
+	}
+	.storyInner div {
+		width:48.751%;
+		height:500px;
+		margin-left:1.378%;
+		padding:30px 35px;
+	}
+	.storyInner div b {
+		width:96px;
+		height:41px;
+		margin-bottom:22px;
+	}
+	.storyInner div i {
+		font-size:2.5rem;
+		line-height:1.32;
+	}
+	.storyInner div:first-child i {
+		display:block;
+		width:84%;
+	}
+	.storyInner div p {
+		font-size:2.0rem;
+		line-height:1.25;
+		margin:22px auto 41px;
+	}
+	.storyInner div a {
+		width:250px;
+		height:60px;
+		font-size:2.0rem;
+		line-height:56px;
+	}
+	.storyInner div a span {
+		width:20px;
+		height:20px;
+		margin-left:25px;
+	}
+	
+	/* cast */
+	#cast {
+		padding:74px 0 76x;
+		background:url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+	}
+	.castInner {
+		width:82.128%;
+		margin:0 auto;
+		padding-top:76px;
+	}
+	.castInner .title {
+		float:left;
+		background:none;
+		width:38.643%;
+		height:250px;
+		padding-top:0;
+		margin-top:6px;
+		margin-bottom:0;
+		text-align:left;
+	}
+	.castInner .title a {
+		width:290px;
+		height:78px;
+		line-height:71px;
+		font-size:1.8rem;
+		padding-left:22px;
+	}
+	.castInner .title h3 {
+		margin-bottom:27px;
+	}
+	.castInner .title a span {
+		margin-left:11px;
+		width:18px;
+		height:18px;
+	}
+	.castInner .slider {
+		float:right;
+		width:61.117%;
+		padding:2px;
+		margin:0;
+		border:none;
+		border-radius:5px 5px 5px 0;
+	}
+	.castInner .slider div>span {
+		height:502px;
+	}
+	.castInner .slider div a {
+		height:280px;
+		padding:41px 0 38px;
+	}
+	.castInner .slider div a b, .castInner .slider div a p,.castInner .slider div a >span {
+		display:block;
+	}
+	.castInner .slider div a b {
+		font-size:3.3rem;
+		font-weight:normal;
+		color:#000;
+	}
+	.castInner .slider div a b span {
+		display:block;
+		width:60px;
+		height:3px;
+		margin:16px auto 17px;
+		background:rgba(0,181,216,0.5);
+	}
+	.castInner .slider div h4 {
+		font-size:2.0rem;
+		color:#000;
+	}
+	.castInner .slider div a p {
+		width:87.937%;
+		margin:13px auto 20px;
+		font-size:1.7rem;
+		line-height:1.17;
+		color:#909090;
+	}
+	.castInner .slider div a >span {
+		display:inline-block;
+		width:200px;
+		height:50px;
+		background:#00b5d8;
+		font-size:2.1rem;
+		text-align:center;
+		color:#fff;
+		line-height:47px;
+		border-radius:2px;
+		margin:0 auto;
+	}
+	
+	.castInner .banner {
+		float:left;
+		width:38.877%;
+		height:250px;
+		padding:28px 0 0 0;
+		margin:0;
+		border-radius:5px 0 0 0;
+		background:#fff;
+		text-align:center;
+	}
+	.castInner .banner:last-child {
+		height:280px;
+		background:#02b5d6;
+		border-radius:0 0 0 5px;
+		padding:20px 0 0 0;
+	}
+	.castInner .banner:last-child h4 {
+		color:#fff;
+	}
+	.castInner .banner h4 {
+		margin-bottom:16px;
+	}
+	.castInner .banner h4 span {
+		display:block;
+		width:60px;
+		height:3px;
+		background:#02b5d6;
+		margin:16px auto;
+	}
+	.castInner .banner:last-child h4 span {
+		background:rgba(255,255,255,0.7);
+	}
+	.castInner .banner p {
+		font-size:2.1rem;
+		line-height:1.104;
+		margin-top:-6px;
+	}
+	.castInner .banner:last-child p {
+		width:78.153%;
+		margin:0 auto;
+		color:#fff;
+	}
+	.castInner .banner>span {
+		position:static;
+		display:inline-block;
+		width:200px;
+		height:50px;
+		border-radius:2px;
+		background:#00b5d8;
+		text-indent:0;
+		font-size:2.1rem;
+		color:#fff;
+		margin-top:20px;
+		line-height:50px;
+	}
+	.castInner .banner:last-child>span{
+		color:#000;
+		background:#fff;
+	}
+	/* knowhow */
+	#knowhow {
+		padding: 70px 0;
+		background:#f4f4f4 url(../img/cjw-bg-foodknowhow.jpg) no-repeat right bottom;
+	}
+	.knowhowInner {
+		width:91.015%;
+		float:right;
+	}
+	.knowhowInner .title {
+		float:left;
+		width:34.908%;
+		height:250px;
+		padding-top:0;
+		margin-bottom:0;
+		background:none;
+		text-align:left;
+	}
+	.knowhowInner .title h3 {
+		margin-bottom:33px;
+		color:#000;
+	}
+	.knowhowInner .title a {
+		width:287px;
+		height:74px;
+		border:none;
+		border-radius:0;
+		background:#929292;
+		line-height:74px;
+		font-size:1.8rem;
+		text-align:center;
+	}
+	.knowhowInner .title a span {
+		margin-left:11px;
+		width:18px;
+		height:18px;
+	}
+	.knowhowInner .slider {
+		float:right;
+		width:64.983%;
+		padding:2px;
+		margin:0;
+		border:none;
+		border-radius:0;
+	}
+	.knowhowInner .slider div>span {
+		height:246px;
+		border-radius:0;
+	}
+	
+	.knowhowInner .slider div a {
+		float:left;
+		width:60.891%;
+		height:250px;
+	}
+	.knowhowInner .slider div a >span {
+		display:inline-block;
+		width:199px;
+		height:50px;
+		background:#fcb54d;
+		line-height:49px;
+		font-size:2.1rem;
+		color:#fff;
+		margin:0 auto;
+		text-align:center;
+		border-radius:2px;
+	}
+	.knowhowInner .slider div i {
+		float:right;
+		width:39.108%;
+		height:250px;
+		border-top:3px solid #fff;
+		background:url(../img/cjw-img-cjwRecipe.jpg) no-repeat center/cover;
+	}
+	.knowhowInner .slider div a h4, .knowhowInner .slider div a >span {
+		display:block;
+	}
+	.knowhowInner .slider div a h4 {
+		font-size:3.3rem;
+		color:#000;
+		text-align:center;
+		font-weight:normal;
+	}
+	.knowhowInner .slider div a h4 span {
+		display:block;
+		width:60px;
+		height:3px;
+		margin:17px auto 12px;
+		background-color:rgba(255,181,77,0.7);
+	}
+	.knowhowInner .slider div p {
+		width:90.487%;
+		margin:0 auto 18px;
+		font-size:2.0rem;
+	}
+	.knowhowInner .slider div p span {
+		display:none;
+	}
+	.knowhowInner .banner {
+		float:right;
+		width:39.742%;
+		height:250px;
+		margin:0 25.349% 0 0;
+		padding: 38px 18px 0;
+		border-radius:0 0 5px 0;
+		background:#76d9c5;
+		text-align:center;
+	}
+	.knowhowInner .banner h4 {
+		margin-bottom:0;
+	}
+	.knowhowInner .banner h4 span {
+		display:block;
+		width:60px;
+		height:3px;
+		margin:17px auto 14px;
+		background-color:rgba(255,255,255,0.7);
+	}
+	.knowhowInner .banner>span {
+		display:block;
+		position:static;
+		width:200px;
+		height:50px;
+		background:#fff;
+		color:#000;
+		margin:17px auto 0;
+		text-indent:0;
+		line-height:50px;
+		font-size:2.1rem;
+		border-radius:2px;
+	}
+	.knowhowInner .bannerWrap {
+		float:left;
+		width:34.908%;
+        margin-top:-250px;
+		background:#f4cb4d;
+        border-radius:5px 0 0 5px;
+	}
+	.knowhowInner .bannerWrap .banner {
+		position:relative;
+		display:block;
+		height:125px;
+		color:#000;
+		border-top:2px solid #fff;
+        width:88%;
+        margin:0 auto;
+	}
+    .knowhowInner .bannerWrap .banner:first-child {
+        border-top:none;
+    }
+	.knowhowInner .bannerWrap .banner h4 {
+		position:absolute;
+		top:55px;
+		/*left:5.846%;*/
+		font-size:3.3rem;
+		font-weight:normal;
+	}
+	.knowhowInner .bannerWrap .banner p {
+		position:absolute;
+		top:35px;
+		/*left:5.846%;*/
+		font-size:1.7rem;
+	}
+	.knowhowInner .bannerWrap .banner span {
+		position:absolute;
+		top:50%;
+		right:0;
+		width:26px;
+		height:48px;
+		margin-top:-24px;
+		background:url(../img/cjw-arrow-section-right.png) no-repeat center/contain;
+		text-indent:-9999px;
+	}
+	.knowhowInner .bannerWrap a.banner {
+        width:88%;
+		position:relative;
+		display:block;
+		height:125px;
+		color:#000;
+		border-top:2px solid #fff;
+        border-radius:0;
+        margin:0 auto;
+        padding:0;
+        float:none;
+        background:none;
+	}
+	
+	/* friends */
+	#friends {
+		background:url(../img/cjw-bg-friends.jpg) no-repeat center/cover;
+	}
+	.friendsInner {
+		width:80.989%;
+        margin:0 auto;
+	}
+	.friendsInner .title {
+		background:none;
+		width:50%;
+		height:242px;
+		float:left;
+        text-align:left;
+	}
+	.friendsInner .title h3 {
+		margin:0;
+		margin-bottom:28px;
+		text-align:left;
+	}
+	.friendsInner .title a {
+		width:290px;
+		height:74px;
+		background:#929292;
+		line-height:70px;
+		font-size:1.8rem;
+		text-align:center;
+		background:rgba(0,0,0,0.4);
+		border:3px solid rgba(255,255,255,0.4);
+		border-radius:3px;
+		margin:0;
+	}
+	.friendsInner .title a span {
+        margin-left:12px;
+	}
+	.friendsInner .banner:nth-of-type(1) {
+		width:60.905%;
+		height:484px;
+		float:left;
+	}
+	.friendsInner .banner:nth-of-type(1) .bg {
+		width:170px;
+		height:170px;
+	}
+	.friendsInner .banner:nth-of-type(1) span:last-child {
+		background:#fff;
+	}
+	.friendsInner .banner:nth-of-type(2) {
+		width:39.094%;
+		height:242px;
+		float:right;
+		background-image:none;
+		padding:40px 45px 0;
+		margin:0;
+		margin-top:-242px;
+		text-align:center;
+	}
+	.friendsInner .banner:nth-of-type(2) h4 {
+		margin-bottom:24px;
+	}
+	.friendsInner .banner:nth-of-type(2) p {
+		letter-spacing:-0.5px;
+	}
+	.friendsInner .banner:nth-of-type(2) span {
+		background:#fff;
+		text-indent:0;
+		color:#000;
+		width:200px;
+		height:50px;
+		margin:17px auto 0;
+		line-height:50px;
+		text-align:center;
+		position:static;
+		font-size:2.0rem;
+	}
+	.friendsInner .box {
+		width:39.094%;
+		float:right;
+	}
+	.friendsInner .bannerBox {
+		width:100%;
+		height:242px;
+		background:#fff;
+	}
+	.friendsInner .bannerBox .pc {
+		font-size:1.6rem;
+		text-align:center;
+		color:#737373;
+        padding-top:8px;
+	}
+    
+    /* SNS */
+    #sns {
+        background:url(../img/cjw-bg-sns1.png) no-repeat right top;
+        background-size:313px 265px;
+    }
+    .snsInner {
+        background:url(../img/cjw-bg-sns2.png) no-repeat left bottom;
+        background-size:460px 281px;
+    }
+    .snsInner .title h3 {
+        font-size:5.8rem;   
+    }
+    .snsInner .title p {
+        font-size:2.9rem;
+        padding-top:40px;
+    }
+    .snsInner .notice.pc {
+        display:none;
+    }
+    .snsInner .box a span {
+        width:39%;
+    }
+    .snsInner .box .text {
+        width:48%;
+    }
+    .snsInner .box a:last-child .text {
+        margin-left:13%;
+    }
+}
